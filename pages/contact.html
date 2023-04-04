@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Contacto - Telemetric</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Paneles</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Ajustes</a></li>
+                        <li><a class="dropdown-item" href="#!">Registro de actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="../pages/login.html">Inicio de sesión</a></li>
+                        <li><a class="dropdown-item" href="../pages/register.html">Registrese</a></li>
+                        <li><a class="dropdown-item" href="../pages/password.html">Olvidó su clave?</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Fabián</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Telemetric
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Diseños
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../pages/layout-static.html">Navegación estática</a>
+                                    <a class="nav-link" href="../pages/layout-sidenav-light.html">Barra lateral</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Páginas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autenticación
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/login.html">Iniciar sesión</a>
+                                            <a class="nav-link" href="../pages/register.html">Registro</a>
+                                            <a class="nav-link" href="../pages/password.html">Olvidó su clave?</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseSop" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Soporte
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseSop" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/contact.html">Contacto</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/401.html">Página 401</a>
+                                            <a class="nav-link" href="../pages/404.html">Página 404</a>
+                                            <a class="nav-link" href="../pages/500.html">Página 500</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Complementos</div>
+                            <a class="nav-link" href="../pages/charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Gráficos
+                            </a>
+                            <a class="nav-link" href="../pages/tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tablas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Conectado como:</div>
+                        Paneles
+                    </div>
+                </nav>
+            </div>
+
+
+
+            <!-- Navigation-->
+            <!-- <section class="py-5"> Page content-->
+
+            <div id="layoutSidenav_content">
+                <div class="container-fluid px-4">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder">Ponte en contacto, puedo ayudarte.</h1>
+                            <p class="lead fw-normal text-muted mb-0">Envíame tus datos y me contacto contigo.</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                    <!-- Name input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text" placeholder="Introduzca su nombre..." data-sb-validations="required" />
+                                        <label for="name">Nombre completo</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">Se requiere un nombre.</div>
+                                    </div>
+                                    <!-- Email address input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="email" type="email" placeholder="usuario@ejemplo.com" data-sb-validations="required,email" />
+                                        <label for="email">Dirección de correo electrónico</label>
+                                        <div class="invalid-feedback" data-sb-feedback="email:required">Se requiere un email.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido.</div>
+                                    </div>
+                                    <!-- Phone number input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                        <label for="phone">Número de teléfono</label>
+                                        <div class="invalid-feedback" data-sb-feedback="phone:required">Se requiere un número de teléfono.</div>
+                                    </div>
+                                    <!-- Message input-->
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" type="text" placeholder="Introduzca su mensaje aquí..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="message">Mensaje</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">Se requiere un mensaje.</div>
+                                    </div>
+                                    <!-- Submit success message-->
+                                    <!---->
+                                    <!-- This is what your users will see when the form-->
+                                    <!-- has successfully submitted-->
+                                    <div class="d-none" id="submitSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder">Envío de formulario exitoso!</div>
+                                            Para activar este formulario, regístrate en
+                                            <br />
+                                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                        </div>
+                                    </div>
+                                    <!-- Submit error message-->
+                                    <!---->
+                                    <!-- This is what your users will see when there is-->
+                                    <!-- an error submitting the form-->
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error enviando mensaje!</div></div>
+                                    <!-- Submit Button-->
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact cards-->
+                    <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                            <div class="h5 mb-2">Habla con nosotros</div>
+                            <p class="text-muted mb-0">Chatea en vivo con uno de nuestros especialistas de soporte.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                            <div class="h5">Pregunta a la comunidad</div>
+                            <p class="text-muted mb-0">Explore los foros de nuestra comunidad y comuníquese con otros usuarios.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                            <div class="h5">Centro de Apoyo</div>
+                            <p class="text-muted mb-0">Explore las preguntas frecuentes y los artículos de soporte para encontrar soluciones.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                            <div class="h5">Llámanos</div>
+                            <p class="text-muted mb-0">Llámanos durante el horario comercial normal al (280) 457-0841.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+        <!-- Footer-->
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Fabián Alaníz - Telemetric 2023 <script>DameLaFechaHora();</script></div>
+                    <div>
+                        <a href="../pages/politicas.html">Políticas de Privacidad</a>
+                            &middot;
+                        <a href="../pages/terminos.html">Términos &amp; Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

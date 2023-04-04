@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Politicas de Privacidad</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Paneles</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Ajustes</a></li>
+                        <li><a class="dropdown-item" href="#!">Registro de actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="../pages/login.html">Inicio de sesión</a></li>
+                        <li><a class="dropdown-item" href="../pages/register.html">Registrese</a></li>
+                        <li><a class="dropdown-item" href="../pages/password.html">Olvidó su clave?</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Fabián</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Telemetric
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Diseños
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../pages/layout-static.html">Navegación estática</a>
+                                    <a class="nav-link" href="../pages/layout-sidenav-light.html">Barra lateral</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Páginas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autenticación
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/login.html">Iniciar sesión</a>
+                                            <a class="nav-link" href="../pages/register.html">Registro</a>
+                                            <a class="nav-link" href="../pages/password.html">Olvidó su clave?</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseSop" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Soporte
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseSop" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/contact.html">Contacto</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="../pages/401.html">Página 401</a>
+                                            <a class="nav-link" href="../pages/404.html">Página 404</a>
+                                            <a class="nav-link" href="../pages/500.html">Página 500</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Complementos</div>
+                            <a class="nav-link" href="../pages/charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Gráficos
+                            </a>
+                            <a class="nav-link" href="../pages/tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tablas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Conectado como:</div>
+                        Paneles
+                    </div>
+                </nav>
+            </div>
+            <!-- Contenido del cuerpo de la pagina -->
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Politicas de Privacidad</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Telemetric</a></li>
+                            <li class="breadcrumb-item active">Políticas de Privacidad de este sitio web</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Fabian Alaníz te informa sobre su Política de Privacidad respecto del tratamiento y protección de los datos de carácter personal de los
+                                usuarios y clientes que puedan ser recabados por la navegación o contratación de servicios a través del sitio Web TELEMETRIC. En este
+                                sentido, el Titular garantiza el cumplimiento de la normativa vigente en materia de protección de datos personales, reflejada en la Ley
+                                Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y de Garantía de Derechos Digitales (LOPD GDD). Cumple también con
+                                el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas
+                                (RGPD). El uso de sitio Web implica la aceptación de esta Política de Privacidad así como las condiciones incluidas en el Aviso Legal.
+                                <!--<a target="_blank" href="https://datatables.net/">documentación oficial de tablas de datos</a>-->
+                                <ul class="fa-ul mb-0">
+                                    <li><hr>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Titular: Fabian Alaníz
+                                    </li>
+                                    <li><hr>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        DNI: 26598745
+                                    </li>
+                                    <li><hr>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Domicilio: Duarte Quiros 900
+                                    </li>
+                                    <li><hr>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Correo electrónico: hugo.fabian.alaniz@mi.unc.edu.ar
+                                    </li>
+                                    <li><hr>
+                                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                                        Sitio Web: hfalaniz@github.io
+                                    </li><hr><br>
+                                </ul>
+                                <!-- Principios aplicados en el tratamiento de datos-->
+                                <h2><strong>Principios aplicados en el tratamiento de datos</strong></h2>
+                                En el tratamiento de tus datos personales, el Titular aplicará los siguientes principios que se ajustan a las exigencias del nuevo
+                                reglamento europeo de protección de datos:
+                                <br><hr>
+                                <h4>Principio de licitud, lealtad y transparencia:</h4> El Titular siempre requerirá el consentimiento para el tratamiento de tus datos personales
+                                que puede ser para uno o varios fines específicos sobre los que te informará previamente con absoluta transparencia.
+                                <br><hr>
+                                <h4>Principio de minimización de datos:</h4> El Titular te solicitará solo los datos estrictamente necesarios para el fin o los fines que los
+                                solicita.
+                                <br><hr>
+                                <h4>Principio de limitación del plazo de conservación:</h4> Los datos se mantendrán durante el tiempo estrictamente necesario para el fin o los
+                                fines del tratamiento.
+                                El Titular te informará del plazo de conservación correspondiente según la finalidad. En el caso de suscripciones, el Titular revisará
+                                periódicamente las listas y eliminará aquellos registros inactivos durante un tiempo considerable.
+                                <br><hr>
+                                <h4>Principio de integridad y confidencialidad:</h4> Tus datos serán tratados de tal manera que su seguridad, confidencialidad e integridad esté
+                                garantizada. Debes saber que el Titular toma las precauciones necesarias para evitar el acceso no autorizado o uso indebido de los datos de sus usuarios por parte de terceros.
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Fabián Alaníz - Telemetric 2023</div>
+                            <div>
+                                <a href="../pages/politicas.html">Políticas de Privacidad</a>
+                                &middot;
+                                <a href="../pages/terminos.html">Términos &amp; Condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="../js/datatables-simple-demo.js"></script>
+    </body>
+</html>
