@@ -6,6 +6,29 @@
     // 
 // Scripts
 // 
+var myApp = angular.module('myApp',[]);
+myApp.controller('MyCtrl', function ($scope) {
+  $scope.someMessage = 'Hello World';
+});
+myApp.directive('myDialog', function ($templateRequest, $compile) {
+	return {
+  	restrict: 'A',
+    scope: {
+      message: '='
+    },
+    link: function (scope, element, attrs) {
+      element.on('click', function () {
+        $templateRequest("dialog.html").then(function(html){
+            BootstrapDialog.show({
+              title: 'Say-hello dialog',
+              message: $compile(html)(scope),
+          });
+         });
+        
+      })
+    }
+  }
+});
 
 window.addEventListener('DOMContentLoaded', event => {
 
