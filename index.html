@@ -10,6 +10,26 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <Script Language="JavaScript">
+            function DameLaFechaHora() {
+              var hora = new Date()
+              var hrs = hora.getHours();
+              var min = hora.getMinutes();
+              var hoy = new Date();
+              var m = new Array();
+              var d = new Array()
+              var an= hoy.getYear();
+              m[0]="Enero";  m[1]="Febrero";  m[2]="Marzo";
+              m[3]="Abril";   m[4]="Mayo";  m[5]="Junio";
+              m[6]="Julio";    m[7]="Agosto";   m[8]="Septiembre";
+              m[9]="Octubre";   m[10]="Noviembre"; m[11]="Diciembre";
+              document.write(" "+hrs+":"+min+" (");
+              document.write(hoy.getDate());
+              document.write(" de ");
+              document.write(m[hoy.getMonth()]);
+              document.write(")");
+            }
+          </Script>
         <!-- Para mostrar el BoostrapDialog *********************************************************************************-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -19,68 +39,43 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
+            <!-- Marcar la barra-->
             <a class="navbar-brand ps-3" href="index.html">Paneles</a>
-            <!-- Sidebar Toggle-->
+            <!-- Alternar barra lateral -->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Ajustes</a></li>
-                        <li><a class="dropdown-item" href="#!">Registro de Actividades</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="pages/login.html">Inicio de sesión</a></li>
-                        <li><a class="dropdown-item" href="pages/register.html">Registrese</a></li>
-                        <li><a class="dropdown-item" href="pages/password.html">Olvidó su clave?</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Cerrar Sesión</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- Nav Item - Alerts ************************************************************************************ -->
+            <!-- Nav Item - Notificaciones ************************************************************************************ -->
             <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell fa-fw"></i>
+                    <!--<i class="fas fa-bell fa-fw"></i>-->
+                    <i class="fas fa-bell fa-fw" color = "gray"></i>
                     <!-- Counter - Alerts -->
-                    <span class="badge badge-danger badge-counter">3+</span>
+                    <span class="badge badge-danger badge-counter" color = "red">3+</span> <!-- contador de la cantidad de alertas -->
                 </a>
                 <!-- Dropdown - Alerts -->
-                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in"
                     aria-labelledby="alertsDropdown">
-                    <h6 class="dropdown-header">
-                        Alerts Center
-                    </h6>
+                    <h6 class="dropdown-header">Centro de Alertas y Notificaciones</h6>
                     <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="mr-3">
-                            <div class="icon-circle bg-primary">
-                                <i class="fas fa-file-alt text-white"></i>
+                            <div class="icon-circle bg-warning">
+                                <i class="fas fa-exclamation-triangle text-white" color = "red"></i>
                             </div>
                         </div>
                         <div>
-                            <div class="small text-gray-500">December 12, 2019</div>
-                            <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                        <div class="small text-red-500"> <script>DameLaFechaHora();</script></div>
+                            <span class="font-weight-bold">Sensor TMP-MOT grp 10-911 Obra:? Sensor de Temperatura Refrigerante en rango nivel 1!</span>
                         </div>
                     </a>
                     <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="mr-3">
-                            <div class="icon-circle bg-success">
-                                <i class="fas fa-donate text-white"></i>
+                            <div class="icon-circle bg-red" style="color:green">>
+                                <i class="fas fa-exclamation-triangle text-white"></i>
                             </div>
                         </div>
                         <div>
-                            <div class="small text-gray-500">December 7, 2019</div>
-                            $290.29 has been deposited into your account!
+                            <div class="small text-gray-500"> <script>DameLaFechaHora();</script></div>
+                                Grupo electrógeno bloqueado por sobrecorriente!
                         </div>
                     </a>
                     <a class="dropdown-item d-flex align-items-center" href="#">
@@ -90,14 +85,119 @@
                             </div>
                         </div>
                         <div>
-                            <div class="small text-gray-500">December 2, 2019</div>
-                            Spending Alert: We've noticed unusually high spending for your account.
+                            <div class="small text-gray-500"> <script>DameLaFechaHora();</script></div>
+                                Alerta de consumo de combustible!
                         </div>
                     </a>
-                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                    <a class="dropdown-item text-center small text-gray-700" href="#">Mostrar todas las alertas y notificaciones</a>
                 </div>
-            </li>
-            <!-- ************************************************************************************************************ -->
+                </li>
+                <!-- ************************************************************************************************************ -->
+                <!-- Nav Item - Messages ********************************************************************************************* -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-envelope fa-fw" color = "blue"></i>
+                        <!-- Counter - Messages -->
+                        <span class="badge badge-danger badge-counter" color = "red">7</span>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">
+                            Centro de Mensajes
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src="/assets/img/undraw_profile_1.svg"
+                                    alt="...">
+                                <div class="status-indicator bg-success"></div>
+                            </div>
+                            <div class="font-weight-bold">
+                                <div class="text-truncate">¡Hola! Me pregunto si me puedes ayudar con un
+                                    problema que he estado teniendo.</div>
+                                <div class="small text-gray-500">Ariana Alaniz · 58m</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src="/assets/img/undraw_profile_2.svg"
+                                    alt="...">
+                                <div class="status-indicator"></div>
+                            </div>
+                            <div>
+                                <div class="text-truncate">Tengo las fotos que pediste el mes pasado, como
+                                    ¿quieres que te los envíen?</div>
+                                <div class="small text-gray-500">Zacarias Alaniz · 1d</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src="/assets/img/undraw_profile_3.svg"
+                                    alt="...">
+                                <div class="status-indicator bg-warning"></div>
+                            </div>
+                            <div>
+                                <div class="text-truncate">El informe del mes pasado se ve muy bien, estoy muy contento con
+                                    el progreso hasta ahora, ¡sigan con el buen trabajo!</div>
+                                <div class="small text-gray-500">Fabian Alaniz · 2d</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                    alt="...">
+                                <div class="status-indicator bg-success"></div>
+                            </div>
+                            <div>
+                                <div class="text-truncate">¿Soy un buen chico? Pregunto porque alguien
+                                    me dijo que la gente le dice esto a todos los perros, incluso si no son buenos...</div>
+                                <div class="small text-gray-500">Chico el Perro · 2w</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
+                    </div>
+                </li>
+                <!-- End Nav Item - Messages ********************************************************************************************* -->
+
+                <div class="btn-group">
+                    <a class="btn btn-default" href="#">
+                        <i class="fa fa-align-left" color = "white" title="Align Left"></i>
+                    </a>
+                    <a class="btn btn-default" href="#">
+                        <i class="fa fa-align-center" color = "white" title="Align Center"></i>
+                    </a>
+                    <a class="btn btn-default" href="#">
+                        <i class="fa fa-align-right" color = "white" title="Align Right"></i>
+                    </a>
+                    <a class="btn btn-default" href="#">
+                        <i class="fa fa-align-justify" color = "white" title="Align Justify"></i>
+                    </a>
+                </div>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Ajustes</a></li>
+                        <li><a class="dropdown-item" href="#!">Registro de Actividades</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="pages/login.html">Inicio de sesión</a></li>
+                        <li><a class="dropdown-item" href="pages/register.html">Regístrese</a></li>
+                        <li><a class="dropdown-item" href="pages/password.html">Olvidó su clave?</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -233,9 +333,6 @@
                         </div>
                         <!-- Inicio de la ventana modal /<a href="#openModal">Lanzar el modal</a>/------------------------------------------------------------>
                         <!-- DIÁLOGO 2 - PARA PEDIR CONFIRMACIÓN-->
-                        <!-- Modal -->
-                        <!-- Modal -->
-                        <!-- Modal -->
                         <div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"> BootstrapDialog.alert('I want banana!');</script>
                             <div class="modal-dialog">
@@ -247,7 +344,7 @@
                                     <div class="modal-body">...</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-primary">Guardar cambios</button>
                                     </div>
                                 </div>
                             </div>
@@ -380,12 +477,52 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
-        <!-- Funciones para mostrar dialogos modales ---------------------------------------------------- -->
+        <!-- Funciones para mostrar otros estilos ---------------------------------------------------- -->
+        <!-- Custom fonts for this template-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <!-- Custom styles for this template 
+        <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+
+            <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
         <!-- Core plugin JavaScript-->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
         <script src="js/sb-admin-2.min.js"></script>
-            <!-- Funciones para mostrar dialogos modales ---------------------------------------------------- -->
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
+            <!-- Funciones para mostrar otros estilos ---------------------------------------------------- -->
+        <!-- Para colocar la fecha y la hora en la página *************************************************************-->
+        <script type="text/javascript">
+            function startTime(){
+            today=new Date();
+            h=today.getHours();
+            m=today.getMinutes();
+            m=checkTime(m);
+            document.getElementById('reloj').innerHTML=h+":"+m;
+            t=setTimeout('startTime()',500);}
+            function checkTime(i)
+            {if (i<10) {i="0" + i;}return i;}
+            window.onload=function(){startTime();}
+        </script>
+     
+        <script type="text/javascript">
+            function startDate(){
+            var meses = new Array ("01","02","03","04","05","06","07","08","09","10","11","12");
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var f=new Date();
+            document.getElementById('fecha').innerHTML=diasSemana[f.getDay()] + ", " + f.getDate() + "/" + meses[f.getMonth()] + "/" + f.getFullYear();}
+            window.onload=function(){startDate();}
+        </script>
+        <!-- Fin para colocar la fecha y la hora en la página *************************************************************-->
     </body>
 </html>
